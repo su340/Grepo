@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assyncronus and awaits</title>
+
+      <!-- async function
+      The async function declaration declares an async function where the await keyword is permitted within the function body. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style,
+      avoiding the need to explicitly configure promise chains. -->
+
+  <script>
+    async function firstpromise(){
+      let promise = new Promise(function(resolve,reject){
+      setTimeout(function(){
+       if(true){
+        resolve("1st Promise was kept");
+      }
+        else{
+          reject("1st broken");
+        }
+    },2000)
+    });
+    return await promise
+  };
+
+ firstpromise().then((res)=>console.log(res));
+
+  </script>
+</head>
+<body>
+<!-- Assyncronus and awits are the keywords 
+  which we can use to convert a function adn return a function -->
+
+  <!-- asyncand awaits tells that a promise is a return value from a normal fucntion -->
+</body>
+</html>

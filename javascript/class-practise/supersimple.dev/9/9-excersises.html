@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Excersises</title>
+      <script src = "excerises.js"></script>
+    </head>
+    <body>
+
+    <!-- -------------------------------- -->
+      <button> 9a </button>
+
+    <!-- -------------------------------- -->
+      <button class = "js-b" 
+        onclick="
+        document.querySelector('.js-b').innerHTML = '9b DOne!!'
+      "> 9b </button>
+
+    <button 
+      class = "js-heads" 
+      onclick="document.querySelector('.js-select')
+      .innerHTML = 'You Choose: heads'
+    ">heads</button>
+
+    <button 
+      class = "js-tails"
+      onclick="document.querySelector('.js-select')
+      .innerHTML = 'You Choose:tails'
+    ">tails</button>
+    <p class = "js-select"></p>
+
+    <!-- ------------------------------------------ -->
+    <input
+      placeholder="Name"
+      class ="js-name-input"
+      onkeydown = enterText(event);
+    >
+
+    <button onclick="
+       submitButton();
+    ">submit</button>
+
+    <p class = "js-message-name"></p>
+    <!-- -------------------------- -->
+    <input 
+      placeholder="keyup"
+      class="js-keyUp"
+      onkeyup=" const inputdale = document.querySelector('.js-keyUp');
+      document.querySelector('.js-message').innerHTML = inputdale.value;
+    ">
+    <p class="js-message"></p>
+
+    </body>
+  </html>

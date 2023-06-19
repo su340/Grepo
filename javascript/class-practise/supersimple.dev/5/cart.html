@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart quantity</title>
+  <script src = "cart.js"></script>
+</head>
+<body>
+    <p class = "js-cart-update">Cart Quanity: </p>
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Show Quanity</button>
+    <button onclick="
+      cartQuantity += 1;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Add to Cart</button>
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+2</button>
+    <button onclick="
+      cartQuantity += 3;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    +3</button>
+    <Button onclick="
+      cartQuantity += 4
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+4</Button>
+    <button onclick="
+      cartQuantity += 5
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+5</button>
+    <button onclick="
+      cartQuantity = 0 ;
+      console.log('Cart Quantity was reset');
+    ">Resert Cart</button>
+</body>
+</html>

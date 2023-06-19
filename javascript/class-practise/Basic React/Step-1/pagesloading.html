@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's get loaded First </title>
+  <script>
+    function fun1(){
+      document.getElementById("log").innerText = "bosy is called";
+    console.log("body is called");
+    };
+    function fun2(){
+      document.getElementById("log").innerText = "Window's is called";
+      console.log("window is called");
+    };
+    function fun3(){
+      document.getElementById("log").innerHTML = "Document's is called"
+      console.log("Document is called");
+    };
+    window.addEventListener("load",fun2);
+    document.addEventListener("DOMContentLoaded",fun3);
+  </script>
+</head>
+<body onload="fun1()">
+<h1 id = "log">
+  Lets see what happens
+</h1>  
+</body>
+</html>

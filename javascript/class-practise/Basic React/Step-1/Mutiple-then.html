@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRomise with Multiple .then</title>
+  <script>
+    let promise = new Promise(function(resolve,reject){ // two functions 1st always resolve 
+                                                        //               2nd always reject
+        setTimeout(function(){
+          if(false){
+            resolve("Promise was kept");  //if "true" then resolve will be called
+          }
+          else{      //false value will call the "Erroe" function
+            reject("Promise broken");
+          }
+
+        },2000);     // 2 ms seconds for the output to load , like a time interval
+    });
+    
+  document.addEventListener("DOMContentLoaded",function(){
+  promise
+    .then(function(res){
+      document.getElementsByTagName("h2")[0].textContent = res;
+      return res.toUpperCase();
+          })
+
+    .then(function(res){
+      document.getElementsByTagName("h3")[0].textContent = res;
+      return res.toLowerCase();
+          })
+
+    .then(function(res){
+      document.getElementsByTagName("h4")[0].textContent = res;
+          })
+
+    .catch(function(err){
+      document.getElementsByTagName("h2")[0].textContent = err;
+    })
+
+    .catch(function(err){
+      document.getElementsByTagName("h3")[0].textContant = err;
+    })
+
+   .finally(function(){
+      console.log("Complilation of promise");
+    });
+  });
+
+  </script>
+</head>
+<body>
+  <h1>PRomise with Multiple .then</h1>
+  <h2>User Name:</h2>
+  <h3>User Name:</h3>
+  <h4>username:</h4>
+</body>
+</html>

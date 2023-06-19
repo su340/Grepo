@@ -1,0 +1,39 @@
+npx create-react-app yourfolder ==> 
+
+  This is going to install primary react packcages.
+    Like React ,React scripts, DOM....
+
+    command-line tool that sets up a new React project with all the necessary files and dependencies.
+    To use it, make sure you have Node.js and npm (Node Package Manager) installed on your computer. Then follow these steps:
+
+    cd yourfolder =>
+        npm start==>
+        (
+          This will start the development server and open your application in a web browser at http://localhost:3000.
+          From there, you can start building your React application by editing the source files inside the "src" directory. Any changes you make will automatically update the browser.
+          The "create-react-app" command sets up a basic React project with a preconfigured development environment,
+          including Babel for JavaScript transpilation, Webpack for bundling, and a development server. 
+          It also includes some sample code and a file structure to help you get started quickly.) 
+
+
+./   ==> current directory
+
+structure of files and folders of React application:
+
+  *package.json: 
+      consists of all the dependencies and packages thats an application has installled.
+      React main packages and other "npm" packages.
+
+  *node-modules: 
+       The code for the package.json packages is in node-modules...don't have manually go through the package. it just serves the code.
+
+   *src: 
+        src folder  is where all the logic goes. everything related to our app will be in src folder. 
+        folder helps in developing react.js application.
+
+   *
+
+
+  
+
+

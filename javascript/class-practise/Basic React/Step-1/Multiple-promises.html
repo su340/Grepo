@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Promises</title>
+  <script>
+
+  //-----------This time we can't use variables, as .all will return a function ,
+  //           so we need to have a function in return.
+    let firstpromise = function(){
+      return new Promise(function(resolve,reject){
+      setTimeout(function(){
+       if(false){
+        resolve("1st Promise was kept");
+      }
+        else{
+          reject("1st broken");
+        }
+    },2000)
+    });
+  };
+    let secondpromise =function(){
+      return new Promise(function(resolve,reject){
+      setTimeout(function(){
+       if(false){
+        resolve("2nd Promise was kept");
+      }
+        else{
+          reject("2nd broken");
+        }
+    },1000)
+    });
+  };
+
+    let thirdpromise = function(){
+      return new Promise(function(resolve,reject){
+      setTimeout(function(){
+       if(true){
+        resolve("3rd Promise was kept");
+      }
+        else{
+          reject("3rd was broken");
+        }
+    },4000)
+    });
+  }
+
+  //------------------ALL-------(Need a response or rejection for all the promises)
+  // Promise.all([firstpromise(),secondpromise(),thirdpromise()])
+  // .then(function(res){
+  //         console.log(res)
+  //       })
+  // .catch(function(err){
+  //   console.log(err)
+  // })
+  // .finally(function(){
+  //   console.log("Promises Done");
+  // })
+
+  //-----------------------ANY-------(Only the promise done will be an outcome, false will not be considered)
+  Promise.any([firstpromise(),secondpromise(),thirdpromise()])
+  .then(function(res){
+          console.log(res)
+        })
+  .catch(function(err){
+    console.log(err)
+  })
+  .finally(function(){
+    console.log("Promises Done");
+  })
+
+  //--------------------RACE(Need response or rejection for what ever comes first)
+
+  // Promise.race([firstpromise(),secondpromise(),thirdpromise()])
+  // .then(function(res){
+  //         console.log(res)
+  //       })
+  // .catch(function(err){
+  //   console.log(err)
+  // })
+  // .finally(function(){
+  //   console.log("Promises Done");
+  // })
+  </script>
+</head>
+<body>
+ <h1> Multiple Promises:</h1>
+ </body>
+</html>

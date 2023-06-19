@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Rock Paper Scissor</title>
+      
+    <style>
+      body{
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial;
+      }
+
+      .title{
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .move-icon{
+        height: 50px;
+      }
+
+      .move-button{
+        background-color: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .score{
+        margin-top: 60px;
+      }
+
+      .css-autoplay-button,
+      .reset-score-button{
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
+
+      .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+      };
+
+    </style>
+  </head>
+  <body>
+
+    <p class="title">Rock Paper Scissor</p>
+
+    <button 
+        class="move-button rock-listener">
+        <img src="rock-emoji.png" class="move-icon">
+    </button>
+
+    <button 
+        class="move-button paper-listener">
+        <img src="paper-emoji.png" class="move-icon">
+    </button>
+
+    <button 
+        class="move-button scissor-listener">
+        <img src="scissor-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+
+    <p class ="js-moves" ></p>
+
+    <p class="js-score score"></p>
+
+    <button 
+      class="reset-score-button reset-listener"
+    >Reset</button>
+
+    <button
+        class="js-autoplay-button autoPlay-Listener css-autoplay-button"
+    >Auto Play</button>
+
+    <p 
+    class="js-reset-confirm">
+    </p>
+
+    <script src = "rps-confirm.js"></script>
+  </body>
+</html>

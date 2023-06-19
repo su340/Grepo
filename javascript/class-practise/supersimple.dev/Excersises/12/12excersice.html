@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12 Excersice</title>
+</head>
+<body>
+  <script>
+
+
+// ------------------12j
+    const multiply = (num1,num2)=>{
+       return  num1*num2
+      };
+
+    console.log('12j:',multiply(2,3));
+    console.log('12j:',multiply(7, 10));
+// ------------------12k
+
+const multiplyk = (num1,num2)=> num1*num2
+
+console.log('12k:',multiply(2,3));
+console.log('12k:',multiply(7, 10));
+
+// ------------------12l
+
+function countPositive(nums){
+  let positiveNumbers = 0;
+  nums.forEach((nums)=>{
+    if(nums>=0){
+      positiveNumbers++;
+    }
+  });
+  return positiveNumbers;
+};
+console.log('12l:',countPositive([2,5,-5,-2,-8,3,-9,-1]));
+
+// ------------------12m
+
+function addNum(array,nums){
+ return array.map(value=>value+nums)
+};
+
+console.log('12m:',addNum([2,5],2));
+
+// ------------------12n
+
+function removeEggs(foods){
+ return foods.filter((foods)=>
+  foods !=='eggs' //if food is not equals to true then it adds it to the new array
+ )};
+
+console.log('12n:',removeEggs(['apple','egg','ham','egg',]));
+
+// ------------------12o
+
+function removeEggso(foods){
+  let numberOfEggs=0;
+ return foods.filter((foods)=>{
+  if( foods === 'egg' && numberOfEggs < 2){
+    numberOfEggs++;
+    return false;
+  }  //if food is not equals to true then it adds it to the new array
+  return true;
+})
+}
+console.log('12n:',removeEggso(['egg','apple','egg','ham','egg','egg']));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------12
+// ------------------12
+// ------------------12
+// ------------------12
+// ------------------12
+// ------------------12
+// ------------------12
+// ------------------12
+
+  </script>
+</body>
+</html>

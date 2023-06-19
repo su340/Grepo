@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11 excersice</title>
+</head>
+<body>
+  <script>
+
+  // ---------11a---------
+    const nums=[10,20,30];
+    nums[2]=99;
+    console.log('11a',nums);
+  
+  // ---------11b---------
+    
+  function getLastValue(array){
+    const lastIndex = array.length-1;
+    return array[lastIndex];
+    }
+   
+    console.log('11b',getLastValue([1,20,22,24,5]));
+    console.log('11b',getLastValue(['hi','hello','good']));
+  // ---------11c---------
+    
+  function arraySwap(array){
+    const lastIndex = array.length - 1;
+    
+        // We need to save the values first before
+        // swapping. Otherwise, if we swap directly,
+        // we would lose one of the values.
+    const lastValue= array[lastIndex];
+    const firstValue = array[0];
+    
+
+    array[0] = lastValue;
+    array[lastIndex] = firstValue;
+
+    return array;
+  }
+ 
+  console.log('11c',arraySwap([1, 20, 22, 24, 5]));
+      console.log('11c',arraySwap(['hi', 'hello', 'hey']));
+
+  // ---------11d---------
+  
+  for(i = 0; i<= 10 ; i += 2){
+    console.log('11d',i);
+  }
+
+  // ---------11e---------
+
+  for (i=5 ; i>= 0 ; i--){
+    console.log('11e',i);
+  }
+
+  // ---------11g---------
+
+  const array=[1,2,3,4,5];
+  const result=[];
+
+  for(i = 0 ; i < array.length ; i++){
+    result.push(array[i]+1);
+  }
+
+  console.log('11g',result);
+
+  // ---------11h---------
+
+  function addOne(array){
+    resultg =[];
+    for(i = 0 ; i < array.length ; i++){
+    resultg.push(array[i]+1);
+  }
+  return resultg;
+  }
+
+   console.log('11h',addOne([1,2,3]));
+   console.log('11h',addOne([-2, -1, 0, 99]));
+
+  // ---------11i---------
+
+  function addNum(array,num){
+    let resulti = [];
+    for(let i = 0 ; i < array.length ; i++){
+    resulti.push(array[i]+num);
+  }
+  return resulti;
+  };
+
+  console.log('11i',addNum([1,2,3],2));
+  console.log('11i',addNum([1, 2, 3], 3));
+  console.log('11i',addNum([-2, -1, 0, 99], 2));
+
+  // ---------11j---------
+
+  function addArrays(array1,array2){
+    resultj=[];
+    for(let i = 0 ; i <array1.length ;i++){
+    resultj.push(array1[i]+array2[i]);
+  }
+  return resultj;
+  };
+  console.log('11j',addArrays([1,2,3],[1, 2, 3]));
+ 
+  // ---------11k---------
+
+  function countPositive(nums){
+    let resultk = 0;
+    for(i =0 ; i < nums.length ; i++){
+       if(nums[i]>0){
+        resultk++;
+       }
+    }
+    return resultk ;
+  }
+
+  console.log('11k',countPositive([1, -3, 5])); 
+  console.log('11k',countPositive([1,4,-3,-7,2,-0])); 
+
+// ---------11l---------
+
+function minMax(nums){
+        // We'll set the starting values of min and max
+        // as the first value in the array. (This is
+        // just one way to set the starting values. You
+        // can use another way if you like.)
+  let object = {
+    min : nums[0],
+    max : nums[0]
+  };
+  for(i=0; i < nums.length ; i++){
+    const value = nums[i];
+    if(value < object.min){
+      object.min = value;
+    }
+    if(value > object.max){
+      object.max=value;
+    }
+  }
+  return object;
+};
+
+console.log('11l',minMax([1,4,-3,-7,2,-0]));
+
+// ---------11m---------
+
+function minMax(nums){
+  let object = {
+      min : null,
+      max : null
+  };
+  for(i=0; i < nums.length ; i++){
+    const value = nums[i];
+    if(value < object.min || object.min){
+      object.min = value;
+    }
+    if(value > object.max || object.max){
+      object.max=value;
+    }
+  }
+  return object;
+};
+
+console.log('11m',minMax([]));
+console.log('11m',minMax([3]));
+
+// ---------11n---------
+
+  function countWords(words){
+    let objectn = {};
+    for(i=0;i<words.length;i++){
+      const resultn=words[i];
+      if(!objectn[resultn]){
+        objectn[resultn] = 1;
+      }else{
+        objectn[resultn]++;
+      }
+    }
+    return objectn;
+  };
+  console.log('11n',countWords(['apple','grapes','mango','grapes']));
+  
+// ---------11o---------
+
+let word =['apple','grapes','search','mango','grapes'];
+let index = -1;
+
+  for (i=0;i<word.length;i++){
+    if(word[i]==='search'){
+      index=i
+    }
+  }
+
+  console.log('11o:',index);
+
+  wordo = ['not', 'found'];
+      indexo = -1;
+
+      for (let i = 0; i < wordo.length; i++) {
+        if (wordo[i] === 'search') {
+          indexo = i;
+        }
+      }
+
+      console.log(indexo);
+// ---------11p---------
+
+let wordp =['search','apple','grapes','search','mango','grapes'];
+let indexp = -1;
+
+  for (i=0;i<wordp.length;i++){
+    if(wordp[i]==='search'){
+      indexp=i;
+      break;
+    }
+  }
+
+  console.log('11p:',indexp);
+
+  wordp = ['not', 'found'];
+      indexp = -1;
+
+      for (let i = 0; i < wordp.length; i++) {
+        if (wordp[i] === 'search') {
+          indexp = i;
+        }
+      }
+
+      console.log('11p:',indexp);
+
+// ---------11q---------
+
+function findIndex(arrayq,wordq){
+  for(let i = 0; i <arrayq.length; i++){
+    if(arrayq[i] === wordq){
+      return i;
+    }
+  }
+  return -1
+}
+console.log('11q:',findIndex(['apple','grapes','mango','grapes'],'mango'));
+console.log('11q:',findIndex(['apple','grapes','mango','grapes'],'search'));
+
+// ---------11r---------
+
+function removeEggs(foods){
+  const arrayr=[];
+  for(i=0;i<foods.length;i++){
+    if(foods[i]==='eggs'){
+      continue;
+    }
+    arrayr.push(foods[i]);
+  }
+  return arrayr;
+};
+console.log('11r:',removeEggs(['apple','eggs','grapes','eggs','mango','grapes'],'search'));
+
+// ---------11s---------
+
+function removeEggs(foods){
+  const arrayr=[];
+  let eggsRemoved=0;
+  for(i=0;i<foods.length;i++){
+    if(foods[i]==='eggs' && eggsRemoved < 2){
+      eggsRemoved++;
+      continue; // skips the iteration
+    }
+    arrayr.push(foods[i]);
+  }
+  return arrayr;
+};
+console.log('11s:',removeEggs(['eggs','apple','eggs','grapes','eggs','mango','eggs','grapes']));
+
+// ---------11t---------
+
+function removeEggst(foods){
+   // To remove the last 2 'egg', reverse the array first.
+   const reversedFoods = foods.reverse();
+  const arrayt=[];
+  let eggsRemoved=0;
+  for(i=0;i<reversedFoods.length;i++){
+    if(foods[i]==='eggs' && eggsRemoved < 2){
+      eggsRemoved++;
+      continue; // skips the iteration
+    }
+    arrayt.push(foods[i]);
+  }
+  return arrayt.reverse();
+};
+console.log('11t:',removeEggst(['eggs','apple','eggs','grapes','eggs','mango','eggs']));
+
+// ---------11u---------
+
+
+function removeEggsu(foodsu){
+  const foodsuCopy=foodsu.slice();  //copy of the food(values), to avoid modifying the original array
+  const reverseFoodsu = foodsuCopy.reverse(); //reversing the copy as we are eliminating the last two elements
+ 
+  // console.log(foodsu);
+  // console.log(foodsuCopy);
+  // console.log(reverseFoodsu);
+
+  const resultu = [];
+  let eggsRemovedu = 0;
+
+  for(i=0; i<reverseFoodsu.length; i++){
+    if(foodsu[i] === 'egg' && eggsRemovedu < 2){
+      eggsRemovedu++; //increment it befroe the eliminating the iteration to avoid infinte values
+      continue;
+    }
+    resultu.push(foodsu[i]);
+  }
+  return resultu.reverse();
+}
+const foodsu = ['egg','apple','egg','grapes','egg'];
+console.log('11u:',removeEggsu(foodsu));
+
+// ---------11v---------
+
+for(i=0;i<=20;i++){
+  if(i%3 === 0 && i%5 === 0){
+    console.log('FizzBuzz');
+  }else if(i%3 === 0){
+    console.log('fizz');
+  }else if(i%5 === 0){
+    console.log('buzz')
+  }else{
+    console.log(i);
+  }
+};
+
+// ---------11w---------
+
+function findIndex(arrayq,wordq){
+  for(let i = 0; i <arrayq.length; i++){
+    if(arrayq[i] === wordq){
+      return i;
+    }
+  }
+  return -1
+}
+// console.log('11q:',findIndex(['apple','grapes','mango','grapes'],'mango'));
+// console.log('11q:',findIndex(['apple','grapes','mango','grapes'],'search'));
+
+function unique(arrayw){
+  const resultw=[];
+  for(let i=0; i<arrayw.length; i++){
+    const valuesi=arrayw[i];
+    if(findIndex(resultw,arrayw) === -1){
+      resultw.push(valuesi);
+    }
+  }
+  return resultw;
+}
+
+console.log('11w:',unique(['apple','grapes','mango','grapes','mango']));
+console.log('11w:',unique(['apple','grapes','mango','grapes','search']));
+
+
+// function unique(array) {
+//         const result = [];
+
+//         for (let i = 0; i < array.length; i++) {
+//           const word = array[i];
+
+//           // Using the findIndex() function from above, we
+//           // can check if the string is already in the
+//           // result array. If it's not in the result array
+//           // (index is -1), then add it to the result array.
+//           if (findIndex(result, word) === -1) {
+//             result.push(word);
+//           }
+//         }
+
+//         return result;
+//       }
+
+      // console.log(unique(['green', 'red', 'blue', 'red']));
+      // console.log(unique(['red', 'green', 'green', 'red']));
+
+// ---------11x---------//local storage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

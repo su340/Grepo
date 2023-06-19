@@ -1,0 +1,169 @@
+
+
+------ReactJS:
+React JavaScript is a front-end JavaScript Library for building user interfaces
+
+Libraries of ReactJS : 
+  *Easy to Understand
+  **Excellent cross-platform support
+  ***Fantastic Community
+  ****Most loved Library
+
+  compititors:
+      * Vue JS
+      *Angular Js 
+    This frameworks helps in developing fast and efficient single page applications.
+
+  React: it updates DOM by using Virtual DOM 
+
+  syntax: 
+      const VirtualDOM = {
+        key : value;
+        key : value
+      }
+
+Updating the VirtualDOM is fast easier and light weight when compared to RealDOM.
+
+thus react only updates ht section of the page where the change was made not the entire page like RealDOM
+
+
+How it works:
+
+  When something changes in a component we geta new react Elemnt  ==> react will then compare this elemnt with the children of this element and figures out what has changed.
+
+  And then it will update the part of the RealDOM to keep it in sync with the VirtualDOM 
+
+  Y React use VirtualDOM: 
+    beacuse VirtualDOm is more faster then hte redularDOm(RealDOM).
+We dont have to worry about JavaScript API 
+  
+
+-----ReactJS is a component-based front-end Library
+
+    ---- whole web-application is divided into small        components.
+
+    ---- A Component is a small piece of user-interface.
+      Every React.js application is a tree of components.
+
+      ---Components let you split the UI  into independent pasrts
+
+      so, when you are using an application ==> when you're building an application with react you 'll build application with reusable components and then you'll
+       and combine them to build full-fledged web-application.
+
+firstly, will divide the user-interface into components
+
+ component1,
+ component2 ==> component 2a, component 2b
+ component3 ==> component3a,component3b,component 3c..... 
+
+ There are two types of components:
+  *Functional components 
+  *Class-based components.
+
+Standard Class based-components:
+
+    *Firstly we import react and the structure componets from the react library
+
+Need of Importing ReactLibrary:
+
+  ---Need to import React library to be able to use the entirety of this Library.
+
+  how: 
+    We use regular JS class to make a react component that extends a react component laready written for us in the library.
+
+    _- then we use the render(){} => to describe wha t should be displayed and how shouls the UI  look like 
+
+    class-based components are no longer used , its a history of react.
+
+    ---Funtional Components:
+
+        import React from 'react' ==> 
+                    'react' is a library to write 'React' components...
+----JSX:
+
+    const example = () => {
+      return <div> Hello world</div>//HTML wiht return = JSX 
+     }
+
+JSX is used in React to describe what the 
+user interface should look like
+
+
+---JSX has full control of JS
+-----JSX Produces react Elemnts , it forms the core of the React Syntax
+
+
+---Two ways to setup the React Environment
+
+  1* Manually setting up all the things using webpack and babel
+  2* Using the React app command -saves us from time-consuming setup and          configurations...
+
+----Create React App
+
+create React app is a comfortable enviorment for learning and best way to create/start a single or multi-page applications
+
+* Create REact app is simple tool or
+    commands that generates the requires files and folders
+       to start the react Application and run it in the browser.
+
+* to run the "Create-app-command" 
+    ==> we need to have node.js to be installed.
+
+* Nodes.js is a JS runtime that allows us to execute JS code on the server
+
+
+---------runtime: 
+What is the js runtime?
+The JavaScript runtime is a program that "extends the JavaSciript engine and provides additional functionalities", so it can interact with the outside world. Also, the JS runtime provides features/APIs to build Javascript based software.
+
+To actually execute JavaScript code, you need a program called a runtime. (aka an engine)
+
+Is Node.js a js runtime?
+Node.js is an open-source, cross-platform JavaScript runtime environment.
+
+JavaScript has no compilation step. 
+Instead, an "interpreter" in the browser reads over the JavaScript code, interprets each line, and runs it. More modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles JavaScript to executable bytecode just as it is about to run.
+
+Node. js wastes no time or resources on waiting for I/O requests to return.
+
+
+ Engine and runtime work together. Engine manages everything to generate machine instructions. The runtime provides APIs to communicate with external world like browser console, DOM, or Geolocation device.
+
+    js-file ==> parser(checks for errors)=> AST(asyncronous syntax tree) => Conversion to machine code => code runs
+
+    RUntime is big 
+
+    Every browser has JS Runtime = > JS Runtime has many components, 
+                                      Js Engine is one of the JS component
+
+
+  -------------NODE.js
+
+  Node.js is an open-source,crossplatform Js runtime Environment
+
+  *opensource - source code is publically available for sharing and modification
+
+  *cross-platforms - available on Mac , windows and linux
+
+  *Js runtime environment - provides all neccessary components in order to use and a run a rumtime program outside the browser.
+
+  ** Node.js can run the JS code outside the browser
+
+  What can we build using node.js
+
+    untill node.js JS can be run only in Browsers.
+    but after node.js JS can be run outside the broswer.
+
+    benifits:
+       *build traditinla websites
+       *back-end services like API's
+       *Real time applications
+       *streaming services like(Netflix)
+       *CLI tools
+       *Multiplayer games
+Node.js aloows us to build complex and powerful apppications
+
+
+Steps: 
+
+  npx create-react-app

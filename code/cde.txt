@@ -1,0 +1,85 @@
+Use [70-461]
+
+
+
+Declare @abc as numeric(8,2) = 4
+
+select power(@abc,5)
+select SQRt(@abc)
+select power(@abc,3)
+select power(@abc,-2)
+select Square(@abc)
+
+go
+
+Declare @abc as Numeric(5,2) = 34.4378
+
+Select Floor(@abc)
+Select Ceiling(@abc)
+Select Round(@abc,6)
+Select RAND()
+Select ABS()
+Select COs()
+Select ATAN()
+Select ASIN()
+Select ATN2()
+Select CONV()
+Select COS()
+Select COT()
+Select Degrees()
+Select EXP()
+Select PI()
+Select Sign()
+Select SIN()
+
+---------------------------
+JOIN:
+
+declare @myfir as nvarchar(20)
+declare @mymid as nvarchar(20)
+declare @mylas as nvarchar(20)
+
+select @myfir, @mymid, @mylas
+-----------------
+
+Join with null condition
+
+
+
+use[70-461]
+GO
+
+declare @myfir as nvarchar(20) 
+declare @mymid as nvarchar(20) 
+declare @mylas as nvarchar(20)
+
+select @myfir, @mymid, @mylas
+
+set @myfir= 'mohammed'
+set @mymid= ''
+set @mylas= 'khan'
+
+select @myfir,@mymid,@mylas
+select @myfir+ iif(@mymid is null,' ',' '+@mymid)+' '+@mylas as fullname
+select @myfir+' '+ Case when @mymid is null then ' ' else ' '+@mymid end +' '+ @mylas as FullName
+
+
+---------------------------------------------
+
+Use [70-461]
+Go
+
+declare @myvar as varchar(20)
+declare @myarc as varchar(20)
+declare @mysap as varchar(20)
+
+select @myvar as myvar,@myarc as myarc,@mysap as mysap 
+
+set @myvar=2
+set @myarc=5
+set @mysap=6
+select @myarc+@mysap+@myvar as myfull --here '+' means joining 
+
+------------------------------------------------
+
+

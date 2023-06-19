@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Script</title>
+  <style>
+    .box{
+      width:150px;
+      height:50px;
+      background-color: dimgray;
+      text-align: center;
+      color: white;
+      line-height: 50px;
+
+    }
+  </style>
+  <script>
+
+    // --------------creating an Elemnt With JS
+    // let elm = document.createElement("div");  //creating a virtual element div with an id "root"
+    //     elm.setAttribute("class","box");      //setting the attribute to that id i.e; class with a value "box"
+    //     elm.innerText ="Welcome to yourlife" ; //writting a inner text for the element "welcome to your life"
+
+    // ------------Creating a Nested Element With JS
+    let elm = document.createElement("ul");
+    let nestedElm1 = document.createElement("li");
+      nestedElm1.innerText = "Listed item 1";
+    let nestedElm2 = document.createElement("li");
+      nestedElm2.innerText = "Listed Item 2" ;
+    let nestedElm3 = document.createElement("li");
+      nestedElm3.innerText = "Listed Item 3";
+    let nestedElm4 = document.createElement("li");
+      nestedElm4.innerText = "Listed item 4";
+
+  elm
+  .appendChild(nestedElm1)
+  .appendChild(nestedElm2)
+  .appendChild(nestedElm3)
+  .appendChild(nestedElm4);
+
+  document.addEventListener("DOMContentLoaded",function(){
+      document.getElementById("root").appendChild(elm);
+    })
+  </script>
+</head>
+<body>
+  <h1>JAVA SCRIPT Virtual DOM</h1>
+  <div id="root"></div>
+</body>
+</html>

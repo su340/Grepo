@@ -1,0 +1,46 @@
+
+JavaScript
+	*Deconstruction
+	*class
+	  Satic
+	  Public 
+	  Private
+
+
+React
+
+   *Components
+Parent ------>Child (good Practise)
+	*Child and parent Component
+	*Deafult Props
+	*Static Proptypes -----validation values and types// strirct checking
+
+		*npm i prop-types  //Installation for validation  //external import to react library
+		borrowing Property ==> properties never ownes , always borrowed
+
+//March 25 & 26
+
+"this": reserved keyword can only be used for build in meth 
+		eg: render()
+	:can't be used for developer defined fucntions.
+
+   *State in React  ===>  //State in REact is always an object
+
+
+		Fucntion based components ==> multiple states
+		Class based Components ==> only one single state
+		
+		*setState will Replaces the object
+
+//April 1st 
+
+	Remainig states: increasing Power, replacing and changing the state.
+	Event
+	
+
+======learn : call(),bind().apply()
+
+
+
+
+

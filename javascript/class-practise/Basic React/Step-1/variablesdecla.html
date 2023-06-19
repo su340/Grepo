@@ -1,0 +1,122 @@
+
+<!-- BLOCK SCOPE IN JS
+A JavaScript variable is simply a name of storage location. 
+There are two types of variables in JavaScript : local variable and global variable.
+three kinds of variables: independent, dependent, and controlled.
+Variables has 3 keywords
+var
+let
+const  
+------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Declaration</title>
+  <script>
+
+    // VAR: changable
+    var hero = {
+      name: "Batman",
+      power: 8
+    };
+
+    function init(){
+      if(hero.power > 6){
+        var pandc=hero.name+ " is a strong hero";
+      }
+      console.log(pandc);
+    };
+    init();
+
+    function initi(){
+      if(hero.power < 6){
+        var pandc=hero.name+ " is a strong hero";
+      }
+      console.log(pandc);
+    }
+  initi();
+ 
+  // CONST: has to be defined
+  
+var hero2 = {
+      name: "Spiderman",
+      power: 8
+    };
+  function changeTitles(){
+      if(hero2.power > 6){
+        const temptitle=hero2.name;
+        hero2.name=temptitle+ " is a strong hero";
+    }
+    console.log(hero2.name);
+  };
+
+  changeTitles();
+
+  function changeTitle(){
+      if(hero.power < 6){
+        const temptitle=hero.name;
+        hero.name= temptitle+ " is a strong hero";
+        
+    }
+    console.log(hero.name);
+  };
+
+ changeTitle();
+  
+ //LET: console.log ,if wrong and inside the condition doesnt give an output.
+
+ var hero3 = {
+      name: "Iron Man",
+      power: 8
+    };
+
+    function changeTi(){
+      if(hero3.power < 6){
+        //var temptitle = hero3.name+ " is a strong hero";  
+        //const temptitle = hero3.name;
+        //hero3.name = temptitle+ " is a strong hero"; 
+
+        let temptitle=hero3.name;
+        hero3.name= temptitle+ " is a strong hero";
+        console.log(hero3.name);
+    }
+    
+  }; 
+
+ changeTi();
+  
+ /* Vijays's code
+ why two different lines instead of everything in one line of code?
+
+        function changeTitle(){
+            if(hero.power > 5){
+                var temptitle = hero.title;
+                hero.title = temptitle+" is the dark knight";
+            }
+            console.log(temptitle); // ??? 
+        }; 
+  
+    unable to understand the working completely for hoisting
+    what is the problem and who is getting hoisted in here?
+
+  function changeTitle(){
+            // hoisting
+            var temptitle = undefined;
+            if(hero.power > 5){
+                temptitle = hero.title;
+                hero.title = temptitle+" is the dark knight";
+            }
+            console.log(temptitle); 
+        }; 
+
+*/
+  </script>
+</head>
+
+<body>
+</body>
+</html>

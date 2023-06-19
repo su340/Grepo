@@ -1,0 +1,23 @@
+
+
+----------------AMAZON----------------------
+
+*onclick() ==> runs the JS when the eventof clicking takes place.
+	HTML has an another attribute " onkeydown "......." ==> which runs the JS code when the down key is 	Pressed
+	
+	event = object provided by JS, ==>constains information about the event
+	every event listenr gets an event object 
+
+*For input Element we use ".value"
+
+*let cost =Number(inputEle.value); //storing the value of the input box;DOM automatically converts the value into String, Built-in function, manually define "Number"
+
+------input with keyboard
+
+		onkeydown="if(event.key === 'Enter'){   //Event of (keyboard ==> Enter)
+        			calculateTotal();
+
+---------------converting Number to String--------------------------
+
+*String(25) ==> Built-in fucntion converts a value withing into a string
+

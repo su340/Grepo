@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-button">Second button</button>
+  <script>
+    // ----------------DOM(innerHTML)
+    // document.body.innerHTML='hello';
+    // document.title='changed DOM';
+
+    // console.log(document.title);
+    // document.title='changed DOM';
+    // console.log(document.title);
+    // // ----------------------
+
+    // console.log(document.body);
+    // console.log(typeof document.body);
+// --------------------DOM(document.querySelector())
+
+// document.querySelector('button');
+// console.log(document.querySelector('button').innerHTML);
+// console.log(document.querySelector('button').innerHTML = 'trying to change the inner text of the button');
+
+// -----second button with an query slector
+ document.querySelector('js-button');
+ console.log(document.querySelector('.js-button').innerHTML ='changed');
+ //--USE "." for Class refrence
+    </script>
+</body>
+</html>

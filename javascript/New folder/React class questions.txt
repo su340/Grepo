@@ -1,0 +1,38 @@
+----------Promise
+ByMe=>1)At the End want to send the final msg to both the users with the resuts rather than on console.
+
+2)sending module to other file failed
+
+------PROMISE
+
+4)res,err? Wht toUpperCase?  5) why Lower case ?
+
+--------------------------------------------------
+
+-----------------REACT
+
+2)How is index.html and index.js is connected?
+
+3)During execution what need to run...? index.js(npm start)?, as Always html is runs as the main page.
+
+3*) check the warning for helloworld ==> index.js
+
+3#)Difference between React & ReactDOM?
+
+4)Why app.js say Elm is declared ,When it is not declared?
+
+4) During import, file name to be written?
+
+5)Import NestedElm is not working
+
+6)ONce the code is exported , any changs in the original code, wil the changes be shown in the exported file?
+
+7)How to move any specific lines around the code? Copy and the the same line several times without disturbing the next lines? try it in app.jsx- Clas bassed component
+
+8)steps Folder ==> id,class, queryslector(what should be in HTML)?
+
+9)helloworld ==> index.js  =>can I call three times ReactDOM seperately?  Only the last call is called ... Y ?
+
+10)How to run two files with npm start
+
+

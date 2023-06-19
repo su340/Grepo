@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Advance Features of Fucntions</title>
+  </head>
+  <body>
+    <!-- //Functions are Values:
+    Values types: number,string,boolean -->
+    <button class="js-listener-button">Click</button>
+    <script>
+        const clickButton
+        = document.querySelector('.js-listener-button');
+        
+        const eventListener = () => {
+            console.log("click Listener");
+        };
+        
+        clickButton.addEventListener("click",
+            eventListener);
+        
+        clickButton.removeEventListener("click",eventListener);
+        clickButton.addEventListener("click",()=>{
+            console.log("click 2");
+        });
+
+// ----------------------
+
+        /*setTimeout(function(){
+            console.log('timeOut')
+        },5000)*/
+           //fucntion and takes 2 parameters.
+                //1 para)A function we want to run in the future
+                //2 para)How long to wait b4 runnung the 1st functions... 3000 ms = 3s.
+                // wait for three seconds and then calls the fucntion.
+
+        // -------------------Asyncronus code(doesnt block the next instruction untill the timeout.)
+
+        console.log('next line'); //settiemout doesnt block untill the the timeout..
+                  //it allows excuting the next instruction
+        //synchronus code: it will execute an instruction one after the other
+
+        /*setTimeout(function(){
+            console.log('timeOut');
+            console.log('timeOut2');
+        },5000) */
+        //Inside the fucntion the code is syncronous,
+        //sets the timout in the background and excecute the next instruction.
+
+        // ---------------setInterval(buitl -in function.. )
+
+        // same as timeout except it will keep running the function after each defined time.
+
+        /*setInterval(function(){
+            console.log('timeInterval');
+            console.log('timeInterval2');
+        },3000);*/
+
+        //Passing a fucntion into another function:
+        //forEach ==> runs a fucntion for each value by saying it in the parameter in the fucntion
+        const array = [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+            ].forEach(function(value,index){
+                if(value==='wash dishes'){
+                    return;
+                }
+                console.log(index);
+                console.log(value);
+            });
+
+// -------------------Arrow Function
+function hi(){
+ 
+}
+ 
+ const arrowFunction = (param1,param2) => {
+    console.log('arrow function');
+    return 5;
+ };
+
+ arrowFunction();
+ 
+// -------------------
+ //short cuts for Arrow Function
+
+//  () can be neglected if there is only one parameter
+
+const oneParam = param => {
+    console.log(param+3);
+};
+ 
+oneParam(5);
+ 
+//  -------------------
+ 
+ // One line arrow function has optional "{}"","return"
+ 
+ const oneLine = () => 5+5;
+ console.log(oneLine());
+
+ //Passing a function inta a another function, an arrow function is preffered
+ //ex:
+
+ const arow = [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+            ].forEach((value,index)=>{
+                if(value==='wash dishes'){
+                    return;
+                }
+                console.log(index);
+                console.log(value);
+            });
+
+//Filter runs a fucntion and the () takes two parameters: 
+    
+    // "value,index" ==> same like forEach
+    //difference: filter creates a new array and returns boolean (true,false)
+    //return value always return true.
+    
+console.log([1,0,-3].filter((value,index)=>{
+    if(value>=0){
+        return true;
+    } else{
+        return false;
+    }
+    //other way to make it simple
+    return value>=0
+})
+);
+
+// --map():
+//  make a copy of the array and a new array of what is added in it
+// make works just like forEach and Filte()
+
+
+console.log([1,2,3].map((value,index)=>{
+    return value*2;
+})
+);
+    //simpler way:
+    //we can remove index, as for now mot required
+console.log([1,2,3].map(value=> value*2));
+
+
+
+            </script>
+        </body>
+    </html>

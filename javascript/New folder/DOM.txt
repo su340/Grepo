@@ -1,0 +1,48 @@
+------------------------------------DOM---------------------------
+
+DOM: allows the JS to fully controll the Webpage
+
+one of the most important built-in ibject Provided by JS : "DOM"
+
+*DOM(Document Object Model): ====> Linked to the webpage, models the Webpage.
+
+	document ==> buitl in object 
+	  .      ==> accesing property of the document (property is object)
+	body    ==> accesing the property body
+        .     ==>accesing the property of the body (Propert is innerHTML)
+	
+***document.body ==> lets us get the body element and put it inside JS
+
+**We can have HtML Elment inside JS : <script> we are using body
+			DOM combines HTMLand JS ===> JS takes the control of the webpage.
+
+When HTML is inside the JS , it is converted into JS object 
+		eg: console.log(typeof document.body)
+
+		eg: console.log(document.body.innerHTML);
+		document.body.innerHTML='changeing HTML inside the body';
+
+		*innerHTML:gives us the whole control of the body inside theHTML.
+ 			we have full-control over the webpage with "innerHTML"
+				eg: document.body.innerHTML=<button>Good JoB!!</button>
+
+Method of the DOM:
+
+*document.querySelector(): querySelector lets us get any elemnt from the page and put it inside the JS
+ex:	
+	document.querySelector('button');
+	console.log(document.querySelector('button').innerHTML);
+	console.log(document.querySelector('button').innerHTML = 'trying to change the inner text of the 					particular button element');
+
+----Particular selctor needs a different call name:
+ 	eG: <button class="js-button">Second button</button>
+
+if class id created call it by "."
+ 	eg:  document.querySelector('js-button');
+ 		console.log(document.querySelector('.js-button').innerHTML ='changed');
+ 		//--USE "." for Class refrence
+
+--------Advantage of DOM
+
+*We can get the Html element from the page ,put it in the JS and saved it in the variable.
+**DOM gives theJS full control of the WebPage

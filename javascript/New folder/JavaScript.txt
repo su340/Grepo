@@ -1,0 +1,285 @@
+*Basics- Programming language to give Instructions to computer
+
+*Math and Numbers :
+	Operators
+	Priotiries
+	converting into cents (numbers without decimal)/100 => gets converted into dollar
+	Math.round() to round to the nearest numners.
+		eg: Math.round((5292)*0.1)/100
+			=>5.29
+
+		eg: Math.round(5292+529)/100
+			=>58.21
+
+		 Number to down
+		eg: Math.floor(2.8)
+			=>2
+
+		Number to top
+		eg: Math.ceil(2.8)
+			=>3
+-------------------------------------------
+
+*Strings(Text):
+  console:
+	'hello'
+  Pop-Up
+	 alert('hello');
+
+  Concatenation(Combining text)
+	'some'+"text'
+	'some'+'text'
+	'sometext'
+	'some'+'more'+'text'
+	'somemoretext'
+
+  to check the type of the value:
+
+	=>typeof 2
+	'number'
+	=>typeof 'hello'
+	'string'
+
+  Type coercion / automatic type conversion
+	
+	'hello'+3
+	=>'hello3'
+
+-------------------Advantages of JS:
+	:Does Calculations 
+Best calculation of money is to converting it to CENTS....
+
+	eg:(2095+799)/100
+	=>28.94
+*Template Strings:
+  1)Back ticks `....`    =>    `item(${2*1+2*1}):$${(2*799+2*2095)/100}`
+  2)single  ticks  '...'  =>'hello'
+  3)Double Ticks "...."		==> "I'm Learning JS"
+  4)Escape Character:
+ 	\n ==> new line
+  5)Features of Template String
+		a)Interpolation   ====>   `item(${2*1+2*1}):$${(2*799+2*2095)/100}`
+		b)Multi-line String   ====> `some
+							text'
+								==>'some\ntext'
+      
+	eg: Back ticks helps in calcualtion with the help of ${},within the text
+		`item(${1+1}): $${(2095+799)/100}`
+		==>	'item(2): $28.94'
+		`item(${2*1+2*1}):$${(2*799+2*2095)/100}`
+		==>	'item(4):$57.88'
+	considered as string 
+		'item(${2*1+2*1}):$${(2*799+2*2095)/100}'
+
+------------------------------Features of Javascript-----------------
+
+*HTML Element: <h1> <style> <script> <head> <body> <title> etc;
+*HTML Attributes: onClick = "" etc; event also
+*HTML Property: Power{},button{}........
+
+--------------------------
+*VAriables:
+	let
+	var
+	const
+**Best Practise is to keep the variables within the fucntion with a return call of the variable, if possible.
+
+Features of JAVAScript:
+
+	*Boolean :True(0) Or False(1)and if-satatement:
+		shortcuts of if-statement:
+			#Ternanry Operator ?: (if-else)
+			#Guard Operator &&  (AND operator==> if bpth are true then only the value is true)
+			#Default operator ||
+					
+	*Functions: A function lets us re-use code
+		SYNTAX(rules) for the fucntion:
+			#Function Keyword creates a new function
+			#Choose a name for the function:
+				^can't start with a number
+				^can't use special characters or reserved Keywords
+					except :  _ , $
+				^BEst practise to use camelCase
+   				^ Fucntions needed to be call or run after creation
+Fucntions also creates a scope.
+Any variable created inside the function , only exists between the function
+	**Methods are the fucntions that is saved inside an object
+
+Tracing: Followring the code line by line
+
+*objects: Obejcts helpsus use and store multiple values together.
+	     An object groups multiple values together.
+	     An object has properties & methods 
+		eg: console.log();
+			where console is an object
+				log is an fucntion
+				console.log is a method(object.fucntion ==> Method)
+'.' or '[]' notations can be used to access the properties of the object
+
+build-in object of JS are :
+	**JSON ==>(JavaScript object Notation)
+			JSON only stores or supports converts javascript into string
+			complatible for with different languages.
+			Doesn't support Functions, ' "" ' are accepted. single notes can't be accessed.
+			 
+	**localStorage: Only Sipports Strings
+				Gives a Permanent Storage fot the value unlike te variable(Temporary Storage). 
+	 			localStorage Doesn't get deleted when the page is refreshed
+			SYNTAX to store the item: localStorage.setItem('Name for the value stored','value to be 								    stored');
+                        to get the item : localStorage.getItem('name of the value'); //gets the value out 							   of the string
+SYNTAX to create an object:
+		# Starts and end with {} 
+		#Inside an object, we can have multiple value.
+		#Each Value has an associated propert to it. through whcih we can access it.
+		#Properties and Values are seperated by the " : " ==> {Property value Pair}
+			property.name (.name is called "Dot Notation")
+			Property values can be changed later just by assigning them new ones
+	built in Objects by javascript
+	some eg: console.log;
+		    Math.random();
+		   JSON.stringfy(object);
+		   localStorage.getItem('score');
+
+
+----------------------------------Auto-Boxing:
+
+simple values like
+
+	'strings' can also have properties and methods
+		ex: console.log('hello'.length) ==> 5
+		    console.log('hello'.toUpperCase()) ==>HELLO
+
+This is done by JS automatic feature "Auto-Boxing"
+
+Auto-Boxing: 
+		*AB automatically wraps the string in an object which will have 
+		  properties and methods
+		
+		*AB also works with boolean and Numbers.
+		*It doesn't works with
+			Null  &  Undefined
+
+----Objects are Refrences:
+
+assigning values to an object,values are actually stored in the computer's memory 
+ 	where objects names are only refrences.
+ ex:
+
+	 const object1 = {
+    message : 'hello'
+  }
+console.log(object1);            //be careful while using 'const' with objects 
+                                   //as objects are capable of changing its values.
+
+// --------------------------------
+
+const object2 = object1;
+console.log(object2);
+
+object1.message = 'Well Done Sumia';
+console.log(object2);
+
+//-----------------------------
+
+const object3 ={
+  message : 'hello'
+}
+console.log(object3 === object1); // this defines objects are refrences not 
+                                  //  actual memory , where its values can be used.
+                                  // only its refrence can be used
+
+
+
+-----------------Null(Falsy) && Undefined
+
+Both says something doesn't have a value
+
+Null: intentioally empty
+
+
+----------------------------Destructuring
+
+It's an easier way to take properties out of an object
+
+const object4 = {
+	message : 'Well Done Sumia'
+	price : 625
+	}
+
+now 
+
+const message = object4.message // storing the object4 message into a variable message
+					    // We can write the same code by destructuring.
+
+const {message,price} = object4;    //this is destructuring
+					  //object4.message is stored into the variabel message.
+
+cosnole.log(price);
+
+<p> is a block element : takes up an entire line by itself
+
+
+---------------------------------
+
+
+*document.querySelector() ==> gets the element from the webpage and put them inside the JS
+
+*.innerHTML ==>  Modify an HTML inside an element
+
+*interactive Elements with the KeyDown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Arrays & Loops
+
+
+
+
+
+

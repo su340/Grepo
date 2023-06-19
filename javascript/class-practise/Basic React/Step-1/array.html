@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods</title>
+  <script>
+    let favnums = [3,5,7,9,1];
+    let total = 0;
+    for(i=0;i<favnums.length;i++){
+      total += favnums[i];
+    };
+    console.log(total);
+
+    // array.forEach() itself is a loops, it dont have to go out 
+
+    //forEach() -- USing arrow method to have the fastest compilation for infinite numbers
+    // array.forEach()     =>forEach() runs for each value 
+    let favnums1 = [3,5,7,9,1,4,1];
+    let total1 = 0;
+    favnums1.forEach(function(val,idx,arr){
+      total1 += val;
+    });
+    console.log(total1);
+
+    // ---------------
+
+    let doubfav = [];
+    favnums1.forEach(function(val,arr){
+      // doubfav.push(val * 2);
+    });
+    console.log(doubfav);
+
+
+  </script>
+</head>
+<body>
+</body>
+</html>

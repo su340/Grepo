@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrow function</title>
+  <script>
+    //-------------Function Declaration
+    console.log(add_dec);
+    function add_dec(num1,num2){        //can't be hoisted
+      return num1+num2;
+    };
+    console.log(add_dec);
+
+    // --------------Function Expression
+    console.log(add_exp);
+    var add_exp = function(num1,num2){   //hoisting to the above of the block and gives a 
+                                          // return value as undefined
+      return num1+num2;
+    };
+    console.log(add_exp);   //becomes a function at line 18
+
+    // ---------------------Arrow Function ---------------------------------------------
+
+    // Function Declaration can't be turned into arrow function
+    // where as Function expression can be changed to Arrow Function
+
+    var addo = (add1,add2) => { return add1+add2 };
+    console.log(addo(5,9));
+
+// ----or it can also be written without "retun" and "{ }"" 
+    var addo = (add1,add2) =>  add1+add2 ;
+     console.log(addo(5,9));
+//-----------if one argument
+var addi = add1 =>  add1+add1;
+     console.log(addi(5));
+//----Arrow function ---------takes the scope of thier Parents
+//Arrow function doesn't have its own scope.
+// Arrow function scope uses their parent's scope
+
+var hero = {
+//   saypower: function(){
+//     return 7;
+//   },
+
+//   saygreetings: function(){
+//     return "hello there";
+//  },
+
+// ---------Using Arrow Function to access the sister's properties.
+ saypower: function(){
+    return 7;
+  },
+//“This” keyword refers to an object that is executing the current piece of code
+  saygreetings: function(){
+    var booster = () =>{
+     return this.saypower()*10;
+    }
+    return "my power has been boosted by ten times then my sister's "+booster();
+ },
+
+// ------- or else we can write also by avoidinf {} and return
+
+saygreeting: function(){
+    var booster = () => this.saypower()*10;
+    return "my power has been boosted by ten times then my sister's "+booster();
+ }
+};
+
+  
+console.log(hero.saypower());
+console.log(hero.saygreetings());
+console.log(hero.saygreeting());
+           
+
+// When not to use arrow function
+
+// arrow function gives first priority to windows object then nested function.
+// be careful when using arrow function
+var saypower = function(){
+    return 9;
+}
+var hero = {
+  saypower: function(){
+    return 7;
+  },
+//“This” keyword refers to an object that is executing the current piece of code
+  saygreetings: () =>{
+    var booster = () =>{
+     return this.saypower()*10;
+    }
+    return "my power has been boosted by ten times then my sister's "+booster();
+ },
+};
+
+console.log(hero.saypower());
+console.log(hero.saygreetings());
+
+//when using arrow function in such scenario windows object is used the output we want is 70 not 90.
+
+// using function to avoid such mistakes and be careful while using arrow function
+//That way it will not access outside it scope
+var saypower = function(){
+    return 9;
+}
+var hero = {
+  saypower: function(){
+    return 7;
+  },
+//“This” keyword refers to an object that is executing the current piece of code
+  saygreetings: function(){
+    var booster = () =>{
+     return this.saypower()*10;
+    }
+    return "my power was  boosted by ten times then my sister's "+booster();
+ },
+};
+
+console.log(hero.saypower());
+console.log(hero.saygreetings());
+
+// ------------------
+// Now lets try this
+
+var hero = {
+  saypower: function(){
+    return 7;
+  },
+//“This” keyword refers to an object that is executing the current piece of code
+  saygreetings: function(){
+    var booster = () =>{
+     return this.saypower()*10;
+    }
+    return "my power was " +this.saypower()+ " boosted by ten times then my sister's "+booster();
+ },
+};
+
+console.log(hero.saypower());
+console.log(hero.saygreetings());
+
+// ---------------or else 
+//bind can be used with Single() 
+// In bind first()will set the context and the second () will call the function
+// bind ()changes the content of the function without executing it ,where as the second()actually executes the function.
+var hero = {
+            name : "Hero",
+            version : 1001,
+            saypower : function(){
+                return 7;
+            },
+            saygreeting : function(){
+                var booster = function(boost) {
+                    return this.saypower() * boost;
+                };
+                return "hello my power was "+this.saypower()+" which is now boosted to "+ booster.bind(this)(10);
+            }
+        };
+
+        console.log( hero.saypower() );
+        console.log( hero.saygreeting() );
+</script>
+</head>
+<body>
+  
+</body>
+</html>

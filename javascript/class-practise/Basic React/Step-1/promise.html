@@ -1,0 +1,135 @@
+<!-- Promise
+  The Promise object represents the eventual completion (or failure) of an asynchronous (NON-BLOCKING) operation and its resulting value.
+It is obligatory for a promise to have a function and that fucntion to have more two function :it is a higher order
+fucntion or a composition: takes fucntions as an arguments and returns fucntion as a value -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+  <script>
+
+    //Promise  like a food Delivery -------------------
+
+    //----------LONG FORM-----------
+
+    //create a promise with a function(compulsory) which contains two more fucntions
+    let promise = new Promise(function(resolve,reject){ // two functions 1st always resolve 
+                                                        //               2nd always reject
+        setTimeout(function(){
+          if(true){
+            resolve("Promise was kept");  //if "true" then resolve will be called
+          }
+          else{      //false value will call the "Erroe" function
+            reject("Promise broken");
+          }
+
+        },2000);     // 2 ms seconds for the output to load , like a time interval
+    });
+    //  These methoda are used to complete any one of the following.
+    //------------These methods takes fucntions that returns a value
+    //handles response
+    // promise.then(function(res){
+    //   console.log(res);
+    // });
+
+    // //handles rejection or error
+    // promise.catch(function(err){
+    //   console.log(err);
+    // });
+// promise.finally(function(){
+    //   console.log("Promise is complete");
+
+    // });
+
+///----------------------------different style
+
+  // // handles response
+  //   promise
+  //     .then(function(res){
+  //     console.log(res);
+  //   })
+  //   //handles rejection or error
+  //     .catch(function(err){
+  //     console.log(err);
+  //   })
+  //--------- dosn't need anything.. it's executed nyhow despite of any output
+  //  //handles completion---------- dosn't need anything.. it's executed nyhow despite of any output
+  //     .finally(function(){
+  //     console.log("Promise is complete");
+  //     });
+  
+    
+// ------------------When u dont want to work with catch , it is possible for "Then" can take two parameters
+// for respnse and reject but its not very secure, as it may fials sometimes to catch the error
+// ----------SHORT FORM--------------------
+  // promise
+  //     .then(
+  //     function(res){
+  //     console.log(res);
+  //     },
+  //     function(err){
+  //     console.log(err);
+  //     })
+  //     .finally(function(){
+  //     console.log("Promise is complete");
+  //     });
+
+//--------------Every PROMISE should have two fucntion: success and failure
+//-----------------------(For when you want to notify two users with the one info....)
+
+// document.addEventListener("DOMContentLoaded",function(){
+//   promise
+//       .then(
+//       function(res){
+//              document.getElementsByTagName("h2")[0].textContent = res ;
+//              document.getElementsByTagName("h3")[0].textContent= res ;
+
+//         },
+//         function(err){
+//              document.getElementsByTagName("h2")[0].textContent = err;
+//              document.getElementsByTagName("h3")[0].textContent = err;
+//         })
+//       .finally(function(){
+//       console.log("Promsie Completion");
+//       });
+// })
+
+// -------------- Lets us try another way with multiple "Then"
+
+document.addEventListener("DOMContentLoaded",function(){
+  promise
+  //1st THEN is handling both "request and Error"
+      .then(function(res){
+        document.getElementsByTagName("h2")[0].textContent = res ;
+         document.getElementsByTagName("h3")[0].textContent= res ;
+         return res.toUpperCase();
+        },function(err){
+      console.log(err);
+      })
+      // 2nd Then is handling only "response"... this is y this will be a failure.
+      // 1st function Then has to return something so that second can catch it
+      .then(function(res){
+        // document.getElementsByTagName("h2")[0].textContent = res ;
+         document.getElementsByTagName("h3")[0].textContent= res ;
+      })
+      .catch(function(err){
+        console.log(err)
+      })
+      .finally(function(){
+      console.log("Promise is complete");
+      }); 
+    });     
+</script>
+</head>
+<body>
+  <h1>Promise :Like a food Delivery<br>
+    Notification to two users
+  </h1>
+  <h2>User Name: </h2>
+  <h3>user name:</h3>
+</body>
+</html>

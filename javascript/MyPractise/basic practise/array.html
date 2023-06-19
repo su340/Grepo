@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>
+       Array's in JavaScript
+    </title>
+    <body>
+      <script>
+        let todos = ['Make Dinner','Car Wash','Get Groceries'];
+        todos.push('Eat Dinner',1,12313124,'Lay Down','Enjoying','kya baat hai');
+        todos.forEach(function (param)
+        {
+          let element = document.createElement('div');
+          element.innerText = param;
+          document.body.appendChild(element);
+        });
+
+      </script>
+    </body>
+  </head>
+</html>

@@ -1,0 +1,218 @@
+INTERMEDIATE HTML & CSS SKILLS
+
+
+-------------------------------------------------
+
+<p>
+  Pargraph to text
+</p>
+
+<button>
+  hello 
+</button>
+
+<a href="https://www.youtube.com/"> click to go to youtube
+
+</a>
+
+<a>link</a>
+
+--------------------------------------------------
+
+<a href="https://www.google.com/" target="_blank">
+Search with Google
+</a>
+</br>
+
+<a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiS7oCzwcT6AhV2bG8EHYjTBy8YABAAGgJqZg&ohost=www.google.com&cid=CAESbeD2E6kE-twqVJ0AOJl94bT6GFvRXUElZG8ieEPNcJGcachTz-NEgV8v7YcR2-d1GBDGby8Hp92-BCpdcwrC3R3NiUJaw9hXMDuKgIdT6Ffd6rkhvuHE2o3bknAPLsXWqXZlEXyU6ls2TjIiBY8&sig=AOD64_03ALbeT-mcoffzHkbgRcFLWZw5Pw&q&adurl&ved=2ahUKEwjx1fWywcT6AhXAmIkEHUvlCV4Q0Qx6BAgFEAE" target="_blank">
+Back to Amazon
+</a>
+
+<p>
+  Nike BlackRunning Shoes
+</p>
+
+<p>
+  $39 - in stock.
+</p>
+
+<p>
+  Free delivery tomorrow
+</p>
+
+<button>
+  Add to cart
+</button>
+
+ <button>
+  Buy Now
+ </button>
+
+---------------------------------------------------
+
+  Buttons:
+
+
+
+<style>
+  .subscribe-button{
+    color:white;
+    background-color:rgb(179, 4, 4);
+    border: none;
+    height:30px;
+    width: 100px;
+    border: radius 2px;
+    cursor:pointer;
+  }
+
+  .join-button
+  {
+    cursor:pointer;
+    margin-left:8px;
+    background-color:white;
+    height:30px;
+    width:60px;
+    color:rgb(77, 77, 223);
+    border:solid;
+    border-radius:2px;
+    border-style:solid;
+    border-color:rgb(35, 35, 237);
+    border-width:1px;
+  
+  }
+
+  .tweet-button
+  {
+    cursor:pointer;
+    color : white;
+    background-color : rgb(0, 128, 255);
+    border:none;
+    height:36px;
+    width:74px;
+    border-radius:15px;
+    font-weight:bold;
+    font-size:15px;
+    margin-left:8px;
+  
+  };
+
+</style> 
+
+<button class="subscribe-button">
+  SUBSCRIBE
+</button>
+
+<button class="join-button">
+  JOIN
+</button>
+
+<button class="tweet-button">
+  Tweet
+</button>
+
+-----------------------------------------------
+    Psedocode:  //basiccaly adds extra stlyes in certain situations
+
+<style>
+  .subscribe-button
+  {
+    color:white;
+    background-color:rgb(179, 4, 4);
+    border: none;
+    height:30px;
+    width: 100px;
+    border-radius: 2px;
+    cursor:pointer;
+    transition: opacity 0.15s;
+    margin-left:20px;        //space from left
+    margin-right: 20px;      // space from right
+    padding-top: 10px;
+    padding-right :10px;      //padding automatically resize the space in the button.
+    padding-bottom:10px;
+    padding-left:10px; 
+    vertical-align:top;  //by default text will be align, to change the alignment alignment syntax will be used.
+}
+
+  .subscribe-button:hover        //only when we hover on the button
+  {
+    opacity:0.8;
+    background-color: blueviolet;
+  }
+  .subscribe-button:active     //only activates when we click on the button
+  { 
+    opacity: 0.4;             // takes the value between 0 & 1, 0 means faid out and one means fade in, 0.8 fade out to little extend
+  }
+  .join-button
+  {
+    cursor:pointer;
+    margin-left:8px;
+    background-color:white;
+    height:30px;
+    width:60px;
+    color:rgb(23, 23, 142);
+    border:solid;
+    border-radius:2px;
+    border-style:solid;
+    border-color:rgb(35, 35, 237);
+    border-width:1px;
+    transition: opacity 1s, color white; //set the amount of time for any transition to take place.
+  
+  }
+
+  .join-button:hover
+  {
+    opacity: 0.8;
+    background-color: rgb(89, 89, 241);
+  }
+
+  .join-button:active
+  {
+    opacity:0.4;
+  }
+
+  .tweet-button
+  {
+    cursor:pointer;
+    color : white;
+    background-color : rgb(0, 128, 255);
+    border:none;
+    height:36px;
+    width:74px;
+    border-radius:15px;  //half of the the lowest of height or width
+    font-weight:bold;
+    font-size:15px;
+    margin-left:8px;
+    transition: box-shadow 0.8s;  
+  }
+
+  .tweet-button:hover
+  {
+    opacity:0.8;
+    background-color: aqua;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);  //hori,verti,blur, rgba(0,0,0,0.6) // where 'a' stands for opacity, the value to see through
+  }
+
+  .tweet-button:active
+  {
+    opacity: 0.4;
+    background-color:rgb(165, 245, 165);
+  }
+
+
+
+</style> 
+
+<button class="subscribe-button">
+  SUBSCRIBE
+</button>
+
+<button class="join-button">
+  JOIN
+</button>
+
+<button class="tweet-button">
+  Tweet
+</button>
+
+-----------------------------------------------------------
+

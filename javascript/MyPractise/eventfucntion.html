@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- two headings are being printed which is changed in the dynamic code by providing an ID -->
+  <h1>default mesage</h1>
+  <script>
+  //document=html(head&body)[child] -> windows is loaded[parent]
+  //Event take place->function asssociated with that "Evnet" is called when that particular [Event] is triggered 
+  //Here the first line of code document is loaded and event is listened by the HTML document
+  document.addEventListener("DOMContentLoaded",function(){
+  // fucntion is called which is associated with this event
+  //tag named variable is created to work with this particular function
+    var tag=document.createElement("h1");
+  // adding the element to the document(body) 
+      document.body.appendChild(tag);
+      tag.innerHTML="Welcome to your life";
+    })
+
+    //other way of writing the code
+
+    // window.onload=function(){
+    //  var tag=document.createElement("h1");
+    //     document.body.appendChild(tag);
+    //     tag.innerHTML="Welcome to your life";
+    // }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

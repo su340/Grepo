@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Todo</title>
+      <link rel="stylesheet" href="todo.css">
+  </head>
+<!-- ----------------------Arrays & Loop----------------- -->
+  <body>
+
+    <p>Todo List Practise 1</p>
+
+    <div class="css-grid-input">
+
+    <input 
+      placeholder="Todo name"
+      class= "js-input-Array css-name-input"
+      onkeydown="hitEnter(event)">
+
+    <input type="date" 
+      class="js-todo-date css-dueDate-input">
+
+   <button 
+      onclick="addTodo()"
+      class="css-add-todo-button"
+    >Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+   <script src="todo.js">
+     
+   </script>
+  </body>
+  </html>

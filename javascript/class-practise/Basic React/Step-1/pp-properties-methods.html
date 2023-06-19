@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Privatre Properties and methods, static ,constructors ,setter and getter </title>
+<script>
+  //---SUPER CLASS . everyone class has its own default constructor. which is by default called 
+  class person{
+    canwalk = "defautl walk";
+    constructor(cw){
+      this.canwalk = cw
+    }
+  }
+
+  //sub class or derived class of a Hero class , by using "extends" keyword.
+  class Hero extends person{
+    // ---- Public properties of a class
+    title = "default title"   //public Property //all the instances of The Hero class can Acces it.
+    firstname ="default firstname"
+    lastname = "default lastname"
+
+    // function of a class
+    fullname(){          //puplic method or a function,all the properties of the 
+                         //class can be acces using "this" keyword
+      return this.firstname+" "+this.lastname+""; //return value for the function
+    }
+    // ----------- private property
+    #power = 5;
+    // ---------------Static
+    
+    static version = 100;  //static property, static method We have to learn
+
+    // -----------------getter
+    // with getter we can can acces the private properties
+    get power(){
+      return this.#power;
+    }
+
+    //--setter----------with setter we can set the new values once called at the end
+    set power(npower){
+      this.#power = npower;
+    }
+
+    //---------- constructor------------
+    //creating a class constructor 
+    //super keyword is used to call the constuctor of a parent class . The super keyord 
+    //must be at the top of the sub or derived class constructor
+    constructor(htitle,hfname,hlname,hcw){     
+      super(hcw);
+      this.title = htitle;
+      this.firstname = hfname
+      this.lastname= hlname;
+    };
+  };
+
+  let hero = new Hero("khoshish","karriou","samajne ki","In shaa Allah"); //creating an instance,variable of the class 
+  let hero1 = new Hero("Dekho","shayad","Kuch samaj mei aya","Allhamdulillah")
+  let hero2 = new Hero("MashAllah","Allah ka shukar hai","Samaj mei ara","bye");
+  console.log(hero.title);
+  console.log(hero.power);
+  hero.power = 10;  //setter----a new value can be set for the value
+  console.log(hero.power);   //Private propertycan only be accessed with getter
+  console.log(hero.fullname());//since fullname is a function we have to call it
+  console.log(hero.version); //static properties can't be acces through instances 
+  console.log(Hero.version); //static properties can only be acces through classes. These are classes instances
+  console.log(hero1.fullname());
+  console.log(hero2.title);
+  console.log(hero.firstname,hero.lastname,hero.title,hero.canwalk);     //we have to give the properties name to call the constructor
+  console.log(hero1.firstname,hero1.lastname,hero1.title,hero1.canwalk);
+  console.log(hero2.firstname,hero2.lastname,hero2.title,hero2.canwalk);
+</script>
+</head>
+<body>
+  <h3>Public Private Properties, methods, constructors, static ,getter and setter ,super</h3>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link lang="en">
+<link>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForEach</title>
+  <link rel="stylesheet" href="forEach-todo.css">
+</head>
+<body>
+  <p>Todo List Practise 1</p>
+
+    <div class="css-grid-input">
+
+    <input 
+      placeholder="Todo name"
+      class= "js-input-Array css-name-input"
+      onkeydown="hitEnter(event)">
+
+    <input type="date" 
+      class="js-todo-date css-dueDate-input">
+
+   <button 
+      class="css-add-todo-button add-listener"
+    >Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+  <script src="forEach-todo.js"></script>
+</body>
+</html>

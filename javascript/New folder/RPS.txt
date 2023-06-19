@@ -1,0 +1,20 @@
+-------------------------------------Rock paper scissor:-----------------------------------------------
+
+Algoritham(Collection of steps):
+
+1*computer randomly selects a move
+2*compare the moves to get the result
+3*Update the Score
+3*Display the result and the score in the pop-up
+
+*Math.random() : computer gives a random value each time between 0 & 1
+
+	ComputerValues:
+		0 --------1/2 (Rock)
+		1/2--------1/3 (paper)
+		1/3--------- 1 (scissor)
+
+*Scope: Help us from conflicting th evaribles names 
+	   Limits where a variable exits
+	   if a varibale exists in {..} then it inly exits between {...}
+	  

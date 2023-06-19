@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class-Fun Practise</title>
+  <style>
+      .container{
+            background-color: darkslateblue;
+            margin: 10px auto;
+            width: 800px;
+            height: 300px;
+            border: 1px solid transparent;
+            overflow: auto;
+            text-align: center;
+        }
+      .container .box{
+            background-color: darkorange;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+        }
+  </style>
+  <script>
+
+    function addbox(){
+      var box = document.createElement("div");
+      box.setAttribute("class","box");
+      document.getElementsByClassName("container")[0].appendChild(box);
+    }
+
+    function removebox(){
+      var removing= document.getElementsByClassName("container")[0].firstChild;
+      if(removing){
+        document.getElementsByClassName("container")[0].removeChild(removing);
+      }
+    }
+    
+    function stopadding(){
+      document.getElementsByTagName("button")[0].removeEventListener("click",addbox);
+    }
+   
+
+    function clickbutton(){
+     document.getElementById("add").addEventListener("click",addbox);
+     document.getElementById("remove").addEventListener("click",removebox);
+     document.getElementsByTagName("button")[1].addEventListener("click",stopadding);
+    };
+
+    window.addEventListener("load", clickbutton);
+
+  </script>
+</head>
+<body>
+  <button id="add">Add Box</button>
+  <button>Stop Adding Box</button>
+  <button id="remove">Remove Box</button>
+<div class="container">
+</div>
+
+</body>
+</html>
