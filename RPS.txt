@@ -1,0 +1,26 @@
+// 2 problems to add "addEL" to "Delete" button:
+	
+	1st: Delete button is in the scipt in JS code
+	2nd:querySelector give only one button
+		need to hve "querySelectorAll"
+ 
+We have put HTML that we have generated on the page..
+Delete buton is not on the page
+
+so , we have to pi=ut the Delete button on the page by putting it down the HTMl element. Like this:
+
+--------------------------------------
+
+document.querySelectorAll('.delete-listener')
+  .forEach((deletebutton,index)=>{
+    deletebutton.addEventListener('click',()=>{
+      todolist.splice(index,1);
+      renderTodoList();
+    });
+  });
+
+to summarizzeee-------------
+
+	*We used "querySelectorAll" to get all a list of 		all delete buttons on the page.
+	**We looped through the list using "forEach" 
+	**and for each "deleteButton(parameter) we added an 		EventLsitner and ran the same code to 			splice od the values from the list.

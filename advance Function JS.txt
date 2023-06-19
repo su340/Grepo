@@ -1,0 +1,142 @@
+<!-- //Functions are Values:
+    Values types: number,string,boolean -->
+
+*Fucntions are also Values which can be stored in a variable
+
+const function1 = function greeting(){
+			console.log('hello');
+		  }
+		function1();    //running the fucntion
+
+shortcut for upper function :  fucntion greeting(){
+					console.log('hello);
+	Advantages: easier to reaf
+		    has a feature called Hoisting
+
+*Hoisting:
+
+*Parameter: Passing a value into a function
+
+*Call back Function or a Callback :  
+	Paasing a function into a function
+
+	eg: function run(param){
+		param;
+	    }
+	    run(function(){
+		    console.log('hello4')
+		})
+functions are values . what we can do with values we can do same with the functions. 
+
+
+------------------practical for seeing functions are values
+
+setTimeout: built in funtion in JS
+SetInterva(): same as timeout except it will keep running the function after each 	      defined time.
+ex:
+        setInterval(function(){
+            console.log('timeInterval');
+            console.log('timeInterval2');
+        },3000);
+
+   **setInterval returns a NUMBER which is like an ID which is used to stop the 	INterval
+	
+----------
+
+method chaining: 
+		// We can also write the code in 1 line 		since
+        // .slice() results in an array, which means
+        // we can use .reverse() on the result directly.
+        // This is called "method chaining".
+
+-------continue,return(same):
+skips and continue to the iteration.
+always increase the value beforecontinue statement to avoid infinte results
+if(reverseFoodsu==='eggs'&& removeEggs<2){
+      removeEggs++; //increment it befroe the eliminating the iteration to avoid infinte values
+      continue;
+
+
+---------forEach():
+
+*Preffered over For loop
+*Passing a fucntion into another function:
+*forEach ==> runs a fucntion for each value by saying it in the parameter in the fucntion
+
+forEach ==> breack:
+	better to use for loop for breaking the loop early
+
+
+
+--------------------Arrow Function() ==> shorter way to write arrow fucntions
+
+
+addEventListener() => Every Html element has "addEventListener"
+
+addEventListener() : lets us run some code when  interact with the HTML element when the event takes place.
+
+//aEL: has two parameters: "event,function to be performed"
+        //Advantages of aEL: 
+        //Multiple event listeners for an event
+        //WE can remove an Event Listener using remove EventListener
+
+
+x:
+	const clickButton
+        = document.querySelector('.js-listener-button');
+        
+        const eventListener = () => {
+            console.log("click Listener");
+        };
+        
+        clickButton.addEventListener("click",
+            eventListener);
+        
+        clickButton.removeEventListener("click",eventListener);
+        clickButton.addEventListener("click",()=>{
+            console.log("click 2");
+        });
+
+
+-----------More Features that uses "Functions as Value"
+
+*filter();
+*map();
+
+/Filter runs a fucntion and the () takes two parameters: 
+    
+    // "value,index" ==> same like forEach
+    //difference: filter creates a new array and returns boolean (true,false)
+    //return value always return true.
+
+
+-----------------
+
+// --map():
+//  make a copy of the array and a new array of what is added in it
+// make works just like forEach and Filte()
+//same as filter()
+
+
+---Closure:
+**closure naturally happens in JS code.
+*if a functions has access to a value . it will always ahve access to that value
+**value gets packed together into a function
+
+
+#gameboard>.box#$*9  ==> creating id Gameboard +id *9
+ 
+   <div id="gameboard">
+      <div class="box" id="1"></div>
+      <div class="box" id="2"></div>
+      <div class="box" id="3"></div>
+      <div class="box" id="4"></div>
+      <div class="box" id="5"></div>
+      <div class="box" id="6"></div>
+      <div class="box" id="7"></div>
+      <div class="box" id="8"></div>
+      <div class="box" id="9"></div>
+    </div>
+
+
+

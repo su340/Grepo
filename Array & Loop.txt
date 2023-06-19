@@ -1,0 +1,55 @@
+Algoritham:
+
+*Create an Array to add todos
+*When we click "add"
+*Get the text from the text box
+*Add it to the Array 
+* console,log the "Todo" array
+
+*There are two types of loops 
+	*While loop  //use for non-standardize code
+	*for loop   //use for standardize code
+
+
+**LOoping through an array:
+:Go through an each value of an array 
+:Do something with each value
+
+**Accumulator Pattern:
+	:Create a Variable to store the result 
+	:Loop through the array and update the result.
+ ex: let total = 0;
+     total += num[i].... etc.
+
+--------------
+
+Splice(,) :  //splice:Remove a value from an array
+                           Splice takes two arguments:
+                            1st is the value to be removed
+                            2nd is for how many values to 			    be removed when clicked
+
+-----------------
+Destrauctuting:
+
+to Property and Variable has the same "name","dueDate"
+          //We can select Destructuring
+          //Destructing : variable 'name' takes the property 'name' from todoList
+          //ex: const name = todoObject.name;
+          //    const dueDate = todoObject.dueDate;
+          // instead
+
+          const {name,dueDate} = todoObject;
+
+---------------
+
+ShortHand Property Syntax:
+
+	({
+          // name:name,
+           // dueDate:dueDate or "ShortHand" Property 
+         	
+		name,
+        	dueDate
+                    });
+
+-----------------

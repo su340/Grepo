@@ -1,0 +1,38 @@
+------------Subscribe Button
+
+
+*An element can have Different Classes
+	eg: class = "js-amount cost-input" ==> 2 different classes for one element
+
+*To get an particular element ,use classes for different works
+
+*Padding: Space on the inside
+
+*Pixel: Whole screen is in pixel: A small sqaure on the screen is "Pixel", Everything on the web is measured in Pixels
+
+*To change the 'CSS' :
+	Use HTML element from the page as put them inside the JS 
+	   HTML elements are JS objects which can have Properties
+			Like ==> .innerText
+				    .innerHTML
+				    .classList.add('ClassNAme'); ==> adds a class to an JS 											    obeject = HTML element
+				    .classList.remove('ClassName'); ==> removes a class to an JS 
+										    obeject = HTML element
+	
+	ex: subElm.classList.add('is-subscribed');  
+	    subElm.classList.remove('is-subscribed');
+
+COLOR:
+
+	0-255:
+	  0: less color, darker
+	255: more color, lighter
+
+----------------Amazon Calculator
+
+* padding: 10px; padding at multiple side all at once
+*  padding: 12px 15px; ==> 12px : TOp & Bottom (Vertical)
+		 		 ==>	15px : Left And Right (Horizontal)
+
+*border: 3px solid white; ==> border width, border style, border color
+

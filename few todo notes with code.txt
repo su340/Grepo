@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS Review</title>
+</head>
+<!-- ----------------------Arrays & Loop----------------- -->
+<body>
+<p>Todo List Practise 1</p>
+<input 
+placeholder="Todo name"
+class= "js-input-Array"
+onkeydown="hitEnter(event)">
+<input type="date">
+
+<button 
+onclick="addTodo()"
+>Add</button>
+
+<div class="js-todo-list"></div>
+<!-- we are creating "div" element as we can't have <p> under<p>
+Where as <div>as an container can have paragraphs,butoons etc.. </div> -->
+<script>
+// --------------------------Arrays & Loops----------
+
+//tryignt to enter the value in the array on the webpage
+//calling the function to update 
+const todolist = [
+'make dinner',
+'wash dishes'
+];
+
+// renderTodoList();
+
+// function renderTodoList(){
+
+let htmlList = '';
+
+// --------------------Loops--------------
+for(let i=0; i<todolist.length; i++){
+const todo = todolist[i];
+const html = `<p>
+${todo} 
+<button onclick="todolist.splice(${i},1)">Delete</button>
+renderTodoList();
+</p>`;
+//we are calling splice() ==> to slice of the value from the 
+//todolist for each Index(i) selected , 1 means only 1 item to be removed 
+// when the button is clicked
+htmlList += html; //adding the html element with <p> and <button> to the new container and updating
+console.log(htmlList);
+// index= no.of values in an array-1, index ===1 , asking to give the output untill the array length
+}
+console.log(htmlList);
+//unable to have the output on the webpage
+
+document.querySelector('.js-todo-list')
+.innerHTML = htmlList;
+
+console.log(htmlList)
+
+function addTodo(){
+const inputElement = document.querySelector('.js-input-Array');
+const name = inputElement.value;
+todolist.push(name);
+console.log(todolist);
+inputElement.value= '';  // clear ups the text 
+};
+
+function hitEnter(event){
+if(event.key === 'Enter'){
+addTodo();
+}
+};
+</script>
+</body>
+</html>

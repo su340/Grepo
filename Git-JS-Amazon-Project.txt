@@ -1,0 +1,68 @@
+Git: Track changes in our code and let us easily undo the changes.
+
+Repository: is a folder where changes are being tracked
+
+
+Main idea of JS: 
+	*save the DATA
+	**Generate the HTML
+	***MAke it interactive
+
+Responsive Design: make th website look good  on smaller screen sizes like a phone or a tablet.
+
+
+ Main idea of JS: 
+ 	*save the DATA
+ 	**Generate the HTML
+ 	***MAke it interactive
+
+------------------
+
+*save the data : Data is the information baout our products:
+   ex: name, image,price,rating 
+   for now data is in the HTML code need to generate it in 		JS
+
+  * let products = [{},{},{}] //creating a varibale to save the data bput he products by creating an Array
+  
+ *as array represent a list . Now each products has many values where objects helps in. As objects helps is grouping multiple values.
+
+SYNTAX: forEach()  ===>   forEach(()=>{});
+  array.forEach(function(currentValue, index, arr), thisValue)
+
+
+Benefit of Genertating the HTMl:
+lesser code, dYnamic Elements.
+
+
+Data Attribute:
+	 helps to know which product to add.
+		It's one HTML attribute
+		
+Syntax for DA:
+ 
+	*It's just an HTML attribute
+	**it has to start with data-
+	***Tehn give it any name.
+   data-product-name = "${product.name}"  => dataA-anyNAme 			= ${information about the element}
+	it's also known as Kebab-case which later will /can 	be converted into camelCase
+
+dataset property ==> gets all the dataA information 				attached to the dataA button.
+
+
+
+-------------------
+
+<div class="product-quantity-container js-product-quantity-container-${product.id}">  ==> tO identify which product to be added from the selector
+          <select> ==> It's the special element for the drop down list
+
+--------------------------
+
+const addedMessage=
+      document.querySelector(`.js-added-to-cart-${productId}`
+        );
+
+      addedMessage.classList.add('added-to-cart-visible'); 
+      //What does classList add do in JavaScript?
+        // The classList JavaScript is a read-only property
+        //  that is used to return CSS classes in the form of an array. The classList JavaScript allows us to add, remove, replace, toggle or check whether the specified CSS class is present or not. To add more classes we use the add() method.
+

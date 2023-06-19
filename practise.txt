@@ -1,0 +1,47 @@
+
+// --------------------------Arrays & Loops----------
+
+//tryignt to enter the value in the array on the webpage
+
+const todolist = [
+    'make dinner',
+    'wash dishes'
+];
+
+function renderTodoList(){
+
+let htmlList = '';
+
+// --------------------Loops--------------
+for(let i=0; i<todolist.length; i++){
+    const todo = todolist[i];
+    const html = `<p>${todo}</p>`;
+    htmlList += html;
+console.log(htmlList);
+// index= no.of values in an array-1, index ===1 , asking to give the output untill the array length
+}
+console.log(htmlList);
+//unable to have the output on the webpage
+
+document.querySelector('.js-todo-list')
+.innerHTML = htmlList;
+
+console.log(htmlList);
+
+};
+
+function addTodo(){
+    const inputElement = document.querySelector('.js-input-Array');
+    const name = inputElement.value;
+    todolist.push(name);
+    console.log(todolist);
+    inputElement.value= '';  // clear ups the text 
+};
+
+function hitEnter(event){
+    if(event.key === 'Enter'){
+    addTodo();
+  }
+};
+
+
