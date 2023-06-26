@@ -1,4 +1,4 @@
-
+The <link> tag with the rel attribute set to "stylesheet" and the href attribute pointing to "style.css" is used to include an external CSS file in an HTML document. It tells the browser to fetch the CSS file and apply its styles to the HTML content.
 
 ------ReactJS:
 React JavaScript is a front-end JavaScript Library for building user interfaces

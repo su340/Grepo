@@ -1,0 +1,178 @@
+
+------------------------------REACT PROJECTS------------------------
+
+
+The <link> tag with the rel attribute set to "stylesheet" and the href attribute 
+pointing to "style.css" is used to include an external CSS file in an HTML document.
+ It tells the browser to fetch the CSS file and apply its styles to the HTML content.
+
+ ------------
+
+   *{
+      box-sizing: border-box;
+    }
+
+ ensure that all elements on your web page will have the box-sizing property 
+ set to border-box, which can be useful for achieving consistent sizing 
+ and layout across different elements.
+
+ ------------
+
+ body{
+  font-family: "Poppins" , sans-serif;
+  }
+
+It specifies that the "Poppins" font should be used for the text content within the body element. 
+If the "Poppins" font is not available, it falls back to a sans-serif font.
+
+<span></span> :  A div element is used for block-level organization and styling of page elements,
+                 whereas a span element is used for inline organization and styling.
+
+----------------------------------JSX rules-----------------
+
+What is JSX? Rules to write JSX.
+It always return single element
+
+use Div or React Fragment to wrap all your JSX Code
+
+ClassName in place of class
+
+Need to close all non closing Tags in JSX
+
+Use camelCase for attributes
+
+Autocomplete for React JSX 😍 Very Important
+Open the settings  ==> it is for the suggestion dropdown list when we type 
+
+Open Setting(JSON) file located on Top Right Corner
+
+Add the following Code => "emmet.includeLanguages": {"javascript": "javascriptreact"},
+
+What is Nested Components?
+
+CSS in React JS
+
+Props in React JS
+
+Props Children????
+
+JS important Methods
+Map Method
+
+Spread Operator & Many More
+
+Events In React JS
+
+Todo List Projects 
+Here is the complete CSS file of Todo List
+
+Weather Application Project
+Here is the complete CSS file of Weather Application List
+
+---------------------ComPonentS Rules---------------
+
+*Our First Component in React JS
+Three things are mandatory & that are
+import React from "react"
+
+*any one function (functional Component)
+It should always return JSX.
+
+*two components can't have same name
+
+  Dynamic div:
+    const App = () => {
+      returnReact.createElement("h1",{},"Hello World")
+    }
+
+ ==> need to have 
+      import React from 'react'
+otherwise for after version 17 we don't need to write "Import" statement.
+ 
+------------default text
+  vscode ==>
+    lorem15
+    (lorem+NumberOfWordsYouWant)
+
+
+-------------------------
+<nav>: The outermost element represents the navigation bar.
+
+------------Hooks
+  ------SetState(Best if used with smaller Projects)
+
+const uniqueList = new Set(Menu.map((curElem)=>{
+  return curElem.category;
+}));
+console.log(uniqueList);
+
+
+**new Set(...): This creates a new Set object, 
+     which is a built-in JavaScript data structure that stores unique values. It takes an iterable as an argument.
+**Menu.map((curElem) => { return curElem.category; }): Here, 
+      the map() method is used to iterate over each element (curElem) in
+      the Menu array and return the value of the category property for each element. 
+      This creates a new array with only the categories.
+
+---------------------SPREAD OPERATOR
+
+const uniqueList = [
+                      ...new Set(Menu.map((curElem)=>{
+                      return curElem.category;
+                           })
+                        )
+                    ];
+
+  
+  [...new Set(...)]: The Set object is created using the new keyword, similar to the previous example. 
+  The spread syntax (...) is used to spread the values of the Set into an array.
+
+  the resulting Set is then spread into an array using the spread syntax [...], 
+  effectively converting it into an array.
+
+  -----------map() should have key
+
+  key={currentElm.id}
+
+        The key attribute is typically used when rendering a list of elements in a loop or mapping over an array of data. It helps React keep track of individual elements, improve rendering performance, and efficiently update the component when changes occur. Each element within the array should have a unique key value.
+
+        It's important to note that the key attribute should be applied to the outermost JSX element within the loop or mapping function, and it should have a unique value for each element in the array.
+
+
+--------------------HOt Reload Problem after js 17
+
+.env file
+
+      ===>   FAST_REFRESH = false;
+
+The code snippet you provided appears to be setting a constant variable named FAST_REFRESH to the boolean value false. In most programming languages, this means that the value of FAST_REFRESH will remain false throughout the execution of the program, and it cannot be modified or reassigned to a different value.
+
+--------------------Use Effect :
+
+Use Effect tells React to do something after Render
+
+const UseEffect = () => {
+  const [varName,setVarName] = useState(0);
+  useEffect(()=>{
+    console.log("hi");
+  },[]);
+}
+
+      ==> [] , empty array dependencies works only when page is reloaded, it doesn't effect afterwords
+
+----------------UserReducer(Best if used with bigger projects)
+
+  syntax: 
+        const UseReducer = () => {
+        const [currentState,DispatchMethod] = useReducer(reducerFunction,Initialdata);
+        return()
+        }
+
+   #---reducerFunction has to be defined, where we write the fucntion/code for the action
+   #---DispatchMethod helps in telling the React which action has to be performed
+
+
+
+
+
+  

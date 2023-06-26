@@ -1,0 +1,122 @@
+index.js ==> starting point of every react.js application.
+    inside the index.js file we have 'react-dom' ==> which only call once in our entire react application, no matter how big it is .
+
+How react.js works 
+    React-DOM helps us to render our components
+      and our entire application into the real DOM 
+      more specifically into a "div" with an id of "root".
+
+    This is how we are accessing the basic DOM ,we target this div and populate our entire react apllication and we inject it html div i.e the base premise of how react.js works.
+
+    ----JSX
+        *JSX is a statically-typed, object-oriented programming language
+
+        *it is a syntax extension to javascript
+
+        *it helps in adding HTML With JS.
+        
+        *React is a JavaScript library, and JSX is a      JavaScript syntax extension that can be used with any JavaScript library
+
+        JSX ==> we have to use "className" instead of     "class" attribute.
+
+src > app.js > we have fucntional component
+
+---- {} ===> we can assign any valid javascript code inside plain HTML using {}  : that means we can dynamically render real data inside the browser
+
+React has Dynamic 0r reactive nature.... which is awsome I love ittt.. mmuuuahhhhhhh
+
+----- Ract Fragment: is like an empty div 
+      " <> <h1>code</h1>
+              <h1>code2</h1> </>  "" 
+
+--------------------COMPONENT-----------------
+
+*Components are independent and reusable bits of code. 
+    returns or render JSX
+
+*Every component has built-in properties object
+Types of React Components Discussed
+    Functional Components.
+    Class Components.
+    Pure Components.
+    Higher-Order Components.
+
+component:
+
+      variable variablename = () =>{
+        return ();
+      }
+
+create different components and then import them nto a larger component.
+
+advantage of custom component: we can duplicate the component multiple times
+
+<Person/> 
+<Person/> 
+<Person/> 
+
+--------------------PROPERTIES-------------
+
+---- Props (properties) : props are just arguments that you pass into the react components
+           porps allows to pass dynamic data through react components
+           props are passed through attributes.
+         
+         
+ES6 :
+        ArrayDestructing
+        Import syntax
+        ArrowFunctions etc...
+
+
+**********************REACT HOOKS:
+---React hooks forms:
+          *React Hook Form is a library that helps you
+          validate forms in React. It is a minimal library without any other dependencies, while being performant and straightforward to use, requiring developers 
+          to write fewer lines of code than other form libraries.
+
+          *React hook types.
+              State Hook. Let's get started by useState Hook from React. ...
+              Effect Hook. One of the most critical concepts for mastering React today is understanding how the Use Effect Hook works. ...
+              Context Hook.
+              RefrenceHook
+
+---- useState :
+        The state is a built-in React object that is used to contain data
+        or information about the component. A component's state can change over time;
+        whenever it changes, the component re-renders.
+
+        State uses concept of Array destructuring
+
+        const [stateNAme, stateWork(setterFunction)] = useState(initial Value)
+
+            =>within a pair of [] = a usestate function with an initial value.
+                      a great rule of thumb is to set the second variable 
+                      with the same name as 1st variable with the "use" keyword 
+                      as its a fucntion of the 1st variable
+      
+----- useEffect:
+
+*useEffect connects a component to an external system.
+*includes dealing with network, browser DOM, animations,
+ widgets written using a different UI library, and other non-React code.
+ 
+          *firstly import it at the top from the react library
+              useEffect is called a bit differently,
+          **secondly call it as a function wihtin a fucntion as a firstParameter.
+        
+          There are two rarely used variations of useEffect with differences in timing:
+
+         # useLayoutEffect : fires before the browser repaints the screen.
+                             You can measure layout here.
+                             
+         # useInsertionEffect : fires before React makes changes to the DOM.
+                                Libraries can insert dynamic CSS here.
+          
+
+    Syntax:
+            The basic syntax of useEffect is as follows: 
+                // 1. import useEffect import { useEffect } from 'react';   function MyComponent() { 
+                // 2. call it above the returned JSX 
+                // 3. pass two arguments to it: a function and an array useEffect(() => {}, []); // return ... }
+
+----- useContext:

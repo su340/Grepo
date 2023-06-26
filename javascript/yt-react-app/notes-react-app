@@ -1,0 +1,11 @@
+
+--React:
+
+The line import React from 'react'; imports the React library, which provides the core functionality for creating and managing React components.
+
+--ReactDOM:
+
+The line import ReactDOM from 'react-dom'; imports the ReactDOM library, which is specifically responsible for rendering React components in the DOM (Document Object Model). It provides the ReactDOM.render() function used to render React components into the HTML page.
+
+ 
+
